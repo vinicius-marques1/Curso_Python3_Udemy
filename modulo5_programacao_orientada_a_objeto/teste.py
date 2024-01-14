@@ -1,6 +1,6 @@
-lista = [1, 2]
-
-t = 3, 4
-
-lista = lista + t
-print(lista, type(lista))
+try:
+    prin('sdsd')
+except Exception as e:
+    e.add_note('Meu erro!')
+    print(e.__notes__)
+    
