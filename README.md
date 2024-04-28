@@ -1,3 +1,3 @@
 # Curso_Python3_Udemy
 
-curso completo de python na udemy
+Curso completo de python que fiz na Udemy. O curso foi criado pelo Luiz Otávio Miranda que trabalha como desenvolvedor de softwares.
