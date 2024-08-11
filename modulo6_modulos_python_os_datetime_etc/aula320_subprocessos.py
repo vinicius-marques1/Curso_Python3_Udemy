@@ -26,7 +26,7 @@ import sys
 # sys.platform = linux, linux2, darwin, win32
 
 # cmd = ['ls -lah /']
-cmd = ['ping', '127.0.0.1','-c', '4']
+cmd = ['ping', '127.0.0.1', '-c', '4']
 encoding = 'utf_8'
 system = sys.platform
 
@@ -35,15 +35,23 @@ if system == "win32":
     encoding = 'cp850'
 
 
+# proc = subprocess.run(
+#     cmd, capture_output=True,
+#     text=True, encoding=encoding,
+#     shell=True,
+# )
+
+# Assim funcionou, não sei porque
 proc = subprocess.run(
-    cmd, capture_output=True,
-    text=True, encoding=encoding,
-    shell=True,
+    cmd,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE,
+    timeout=10
 )
 
 print()
 
-# print(proc.args)
-# print(proc.stderr)
+print(proc.args)
+print(proc.stderr)
 print(proc.stdout)
-# print(proc.returncode)
+print(proc.returncode)
